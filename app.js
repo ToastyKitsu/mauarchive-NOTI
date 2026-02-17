@@ -1,5 +1,5 @@
 const SUPABASE_URL = "https://ckpmmxehcaqpstvepjeu.supabase.co";
-const API_KEY = "YOUR_ANON_KEY";
+const API_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNrcG1teGVoY2FxcHN0dmVwamV1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzEzNDIxMTMsImV4cCI6MjA4NjkxODExM30.B2QG-r2kXFeoFqoLB9viMJZOv4AdM56HQZHax0pnbVo"; // Safe to expose
 
 const notificationsContainer = document.getElementById("notifications");
 const downloadsContainer = document.getElementById("downloads");
