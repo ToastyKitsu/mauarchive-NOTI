@@ -34,6 +34,15 @@ h2 { color: #333; }
   border-bottom: 2px solid #fff;
 }
 
+.tab-hidden {
+  display: none;
+}
+
+.tab-visible {
+  display: block;
+}
+
+
 .tab-content {
   border: 1px solid #ccc;
   padding: 10px;
