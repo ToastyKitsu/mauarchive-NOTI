@@ -18,13 +18,14 @@
 
 <h2>Notifications</h2>
 
-<div>
-  <button id="notificationsTab">Notifications</button>
-  <button id="downloadsTab">Downloads</button>
+<div class="tabs">
+  <button class="tab-button active" data-target="notifications">Notifications</button>
+  <button class="tab-button" data-target="downloads">Downloads</button>
 </div>
 
-<div id="notifications"></div>
-<div id="downloads" style="display:none;"></div>
+<div id="notifications" class="tab-content"></div>
+<div id="downloads" class="tab-content" style="display:none;"></div>
+
 
 
 <script src="app.js"></script>
