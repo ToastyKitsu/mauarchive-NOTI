@@ -6,6 +6,23 @@ const downloadsContainer = document.getElementById("downloads");
 
 const notificationsTab = document.getElementById("notificationsTab");
 const downloadsTab = document.getElementById("downloadsTab");
+const tabButtons = document.querySelectorAll(".tab-button");
+const tabContents = document.querySelectorAll(".tab-content");
+
+tabButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    // Remove active from all buttons
+    tabButtons.forEach(b => b.classList.remove("active"));
+    // Hide all content
+    tabContents.forEach(c => (c.style.display = "none"));
+
+    // Activate this button and show its target
+    btn.classList.add("active");
+    const targetId = btn.getAttribute("data-target");
+    document.getElementById(targetId).style.display = "block";
+  });
+});
+
 
 notificationsTab.onclick = () => {
   notificationsContainer.style.display = "block";
