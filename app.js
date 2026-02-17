@@ -9,20 +9,20 @@ const downloadsContainer = document.getElementById("downloads");
 const tabButtons = document.querySelectorAll(".tab-button");
 const tabContents = document.querySelectorAll(".tab-content");
 
-// Tab switching
 tabButtons.forEach(btn => {
   btn.addEventListener("click", () => {
-    // Remove active from all buttons
     tabButtons.forEach(b => b.classList.remove("active"));
-    // Hide all content
-    tabContents.forEach(c => (c.style.display = "none"));
+    tabContents.forEach(c => c.classList.add("tab-hidden"));
+    tabContents.forEach(c => c.classList.remove("tab-visible"));
 
-    // Activate clicked tab and show its content
     btn.classList.add("active");
     const targetId = btn.getAttribute("data-target");
-    document.getElementById(targetId).style.display = "block";
+    const target = document.getElementById(targetId);
+    target.classList.remove("tab-hidden");
+    target.classList.add("tab-visible");
   });
 });
+
 
 // Function to load messages
 function loadMessages() {
